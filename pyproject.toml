@@ -1,0 +1,21 @@
+[project]
+name = "ds-295r-ai-agent-engineering"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "wal21017-boop", email = "wal21017@byui.edu" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "langchain>=1.4.2",
+    "langchain-google-genai>=4.4.0",
+    "python-dotenv>=1.2.3",
+]
+
+[project.scripts]
+ds-295r-ai-agent-engineering = "ds_295r_ai_agent_engineering:main"
+
+[build-system]
+requires = ["uv_build>=0.12.18,<0.13.0"]
+build-backend = "uv_build"
