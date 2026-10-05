@@ -8,6 +8,7 @@ authors = [
 ]
 requires-python = ">=3.13"
 dependencies = [
+    "fastmcp>=4.0.10",
     "langchain>=1.4.2",
     "langchain-google-genai>=4.4.0",
     "python-dotenv>=1.2.3",
@@ -15,7 +16,7 @@ dependencies = [
 ]
 
 [project.scripts]
-ds-295r-ai-agent-engineering = "ds_295r_ai_agent_engineering:main"
+agent = "ds_295r_ai_agent_engineering:main"
 
 [build-system]
 requires = ["uv_build>=0.12.18,<0.13.0"]

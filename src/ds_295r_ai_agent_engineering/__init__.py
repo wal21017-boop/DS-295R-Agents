@@ -1,2 +1,3 @@
-def main() -> None:
-    print("Hello from ds-295r-ai-agent-engineering!")
+from ds_295r_ai_agent_engineering.main_agent import main as main_agent
+def main():
+    main_agent()
