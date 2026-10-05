@@ -17,7 +17,9 @@ def ethics_agent(prompt: str ) -> str:
     """
     
     config = {"configurable": {"thread_id": str(uuid.uuid4())}}
-    model = init_chat_model(model = "google_genai:gemini-3.6-flash"
+    model = init_chat_model(
+                        #model = "google_genai:gemini-3.6-flash"
+                        model = "google_genai:gemini-flash-lite-latest"
                         #, thinking_level = "high"
                         #, thinking_level = "minimal"
                         )

@@ -4,7 +4,6 @@
 import asyncio
 from dotenv import load_dotenv
 load_dotenv()
-
 from langchain.agents import create_agent
 from langgraph.checkpoint.memory import InMemorySaver
 from langchain.messages import HumanMessage
@@ -21,6 +20,12 @@ from langchain.mcp import MCPAdapter
 
 import fastmcp
 
+file_directory = Path(
+    r"C:\Users\brian\OneDrive\Desktop\Fall 2026"
+    r"\DS 295R - AI Agent Engineering"
+    r"\src\ds_295r_ai_agent_engineering"
+    r"\file_storage"
+)
 # An in-process FastMCP server: no subprocess, no socket. Ideal for tests.
 # in_memory = MCPAdapter(server)  # a FastMCP instance
 
@@ -65,7 +70,7 @@ async def _main():
                                 "npx",
                                 "-y",
                                 "@modelcontextprotocol/server-filesystem",
-                                "C:/Users/brian/OneDrive/Desktop/Fall 2026/DS 295R - AI AgentEngineering/ds_295r_ai_agent_engineering/file_storage"
+                                str(file_directory)
                                 ]
                         }                                                                                                                
                     }
@@ -78,7 +83,11 @@ async def _main():
 
 
     
-        model = init_chat_model(model = "google_genai:gemini-flash-lite-latest"
+        model = init_chat_model(
+                        model = "google_genai:gemini-flash-lite-latest"
+                        # model = "google_genai:gemini-3.7-flash"
+                        # model = "gemini-3.1-pro-preview"
+                        # model = ""
                         #, thinking_level = "high"
                         #, thinking_level = "minimal"
                         )
