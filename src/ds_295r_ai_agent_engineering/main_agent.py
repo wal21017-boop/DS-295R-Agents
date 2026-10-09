@@ -38,8 +38,7 @@ import uuid
 
 
 config = {"configurable": {"thread_id": str(uuid.uuid4())}}
-
-
+                
 
 
 
@@ -97,7 +96,18 @@ async def _main():
                 checkpointer= InMemorySaver(), 
                 tools= [ethics_manifesto, ethics_agent, *mcp_tools, korean_tutor],
 #                tools=mcp_tools,
-                system_prompt = " Always refer to the ethics agent for guidance. Store all information that may be helpful for later query answers in the memory.txt file, accessible via the files tool. Stored information may include, user information (full name, email, etc.), query information (the particular type of query, what language is associated with it, etc.), and any other information that may be useful for later reference. Refer back to the memory.txt to tailor responses to the user. when adding information to memory.txt, copy all text and paste it after storing information about the current session with the date and name of user. If no user name is given, assume that it is Brian. Do not override information when saving history"
+                system_prompt = """ 
+                Always refer to the ethics agent for guidance. Store all information that may 
+                be helpful for later query answers in the memory.txt file, accessible via the files tool. 
+                Stored information may include, user information (full name, email, etc.), query 
+                information (the particular type of query, what language is associated with it, etc.), 
+                and any other information that may be useful for later reference. 
+                Refer back to the memory.txt to tailor responses to the user. 
+                When adding information to memory.txt, copy all text and paste it after storing information 
+                about the current session with the date and name of user. 
+                If no user name is given, assume that it is Brian. 
+                Do not override information when saving history
+                """
               )
 
         while True:

@@ -1,4 +1,11 @@
 User: Brian
+Timestamp: Current Session - Checking to see if error appears
+Query Type: Testing / Status Check
+Language: English
+Details: User checked to see if an error appears.
+
+[Previous Memory Content Below]
+User: Brian
 Timestamp: [Current Session] - Religious Inquiry
 Query Type: Religious/Scriptural inquiry (Book of Mormon / Jesus Christ)
 Language: English
@@ -8,4 +15,16 @@ User: Brian
 Timestamp: [Current Session] - Korean Learning
 Query Type: Language learning (Korean)
 Language: English / Korean
-Details: User asked to learn Korean. Introduced basic greetings (안녕하세요, 감사합니다, 안녕히 가세요, 안녕히 계세요) with pronunciation guides, tutor tips, and practice prompts. User responded to practice with romanization ("an nyeong ah se yo") noting they lack a Korean keyboard. User successfully copied and pasted 감사합니다 (Thank you).
+Details: User asked to learn Korean. Introduced and practiced basic greetings.
+
+User: Brian
+Timestamp: [Current Session] - Polite Conversation Starters in Korean
+Query Type: Language learning (Korean conversation starters)
+Language: English / Korean
+Details: User asked to help learn polite conversation starters. Provided polite starters with definitions, usage, and pronunciation tips.
+
+User: Brian
+Timestamp: Current Session - LangChain Agent Error Troubleshooting
+Query Type: Technical / LangChain Framework
+Language: English
+Details: User asked how to prevent the message "Key '$schema' is not supported in schema, ignoring" from appearing when running a LangChain agent.

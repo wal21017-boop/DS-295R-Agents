@@ -13,7 +13,8 @@ from ds_295r_ai_agent_engineering.tools import starter_tool, ethics_manifesto
 
 def ethics_agent(prompt: str ) -> str:
     """
-    This agent provides guidance on following the ethics manifesto, a document used to ensure compliance with necessary regulations.
+    This agent provides guidance on following the ethics manifesto, 
+    a document used to ensure compliance with necessary regulations.
     """
     
     config = {"configurable": {"thread_id": str(uuid.uuid4())}}
@@ -28,7 +29,12 @@ def ethics_agent(prompt: str ) -> str:
                 model = model,
                 checkpointer= InMemorySaver(), 
                 tools= [ethics_manifesto],
-                system_prompt = "Evaluate questions using the ethics manifesto tool to determine whether an answer to the question could break the manifesto. If it would, add additional clarifying information about what the main agent should do. Include the original text of the prompt, with additions necessary for compliance. If no changes are needed simply return the base prompt"
+                system_prompt = """
+                Evaluate questions using the ethics manifesto tool to determine whether an answer to the question 
+                could break the manifesto. 
+                If it would, add additional clarifying information about what the main agent should do. 
+                Include the original text of the prompt, with additions necessary for compliance. 
+                If no changes are needed simply return the base prompt"""
               )
     response = agent.invoke({"messages": [HumanMessage(prompt)]}, config=config)
     return response["messages"][-1].text
