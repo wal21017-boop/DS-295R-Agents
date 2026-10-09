@@ -13,7 +13,7 @@ from langchain.chat_models import init_chat_model
 
 from ds_295r_ai_agent_engineering.tools import starter_tool, ethics_manifesto
 from ds_295r_ai_agent_engineering.ethics_agent import ethics_agent
-
+from ds_295r_ai_agent_engineering.korean_tutor import korean_agent as korean_tutor
 from pathlib import Path
 
 from langchain.mcp import MCPAdapter
@@ -95,9 +95,9 @@ async def _main():
         agent = create_agent(
                 model = model,
                 checkpointer= InMemorySaver(), 
-                tools= [ethics_manifesto, ethics_agent, *mcp_tools],
+                tools= [ethics_manifesto, ethics_agent, *mcp_tools, korean_tutor],
 #                tools=mcp_tools,
-                system_prompt = " Always refer to the ethics agent for guidance."
+                system_prompt = " Always refer to the ethics agent for guidance. Store all information that may be helpful for later query answers in the memory.txt file, accessible via the files tool. Stored information may include, user information (full name, email, etc.), query information (the particular type of query, what language is associated with it, etc.), and any other information that may be useful for later reference. Refer back to the memory.txt to tailor responses to the user. Store information about different users separately."
               )
 
         while True:

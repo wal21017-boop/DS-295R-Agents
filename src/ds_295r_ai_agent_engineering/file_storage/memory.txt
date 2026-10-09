@@ -1,0 +1,7 @@
+User Goal: Practice pronunciation of Korean consonants, and learned how to say "Thank you, can I have another?" in Korean.
+Language: Korean / English instruction.
+Agent Used: Korean agent.
+Information: 
+- Understood consonant differences via English approximations (spin/pen/stop).
+- Learned phrase: "감사합니다, 하나 더 주실래요?" (Gamsahamnida, hana deo jusillaeyo?) or "하나 더 주세요" (Hana deo juseyo).
+- Reviewed consonant sounds present in the phrase (ㅅ, ㅂ, ㄷ, ㅈ, ㄹ).
